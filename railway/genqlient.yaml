@@ -1,0 +1,17 @@
+schema: railway_schema.graphql
+operations:
+- railway_operations.graphql
+generated: generated_railway_graphql.go
+package: railway
+context_type: "-"
+use_struct_references: true
+use_extensions: true
+optional: pointer
+
+bindings:
+  ServiceVariables:
+    type: map[string]string
+  DateTime:
+    type: time.Time
+  JSON:
+    type: map[string]string

@@ -1,0 +1,2 @@
+ALTER TABLE users
+ADD COLUMN object_salt VARCHAR(255) NOT NULL

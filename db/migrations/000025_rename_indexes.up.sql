@@ -1,0 +1,6 @@
+ALTER TABLE channels RENAME INDEX channels_community_id TO channels_community_idx;
+ALTER TABLE communities RENAME INDEX communities_owner_id TO communities_owner_idx;
+ALTER TABLE communities RENAME INDEX communities_self_hosted_id TO communities_self_hosted_idx;
+ALTER TABLE communities_users RENAME INDEX communities_users_user_id TO communities_users_user_idx;
+ALTER TABLE communities_users RENAME INDEX communities_users_community_id TO communities_users_community_idx;
+

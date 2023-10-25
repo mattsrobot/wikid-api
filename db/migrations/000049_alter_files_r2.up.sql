@@ -1,0 +1,1 @@
+ALTER TABLE files ADD COLUMN cf_r2_uid VARCHAR(255);

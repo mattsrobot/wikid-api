@@ -1,0 +1,63 @@
+mutation ServiceCreate($input: ServiceCreateInput!) {
+	serviceCreate(input: $input) {
+		id
+		name
+		icon
+		createdAt
+		projectId
+	}
+}
+
+mutation ServiceDelete($id: String!, $environmentId: String) {
+	serviceDelete(id: $id, environmentId: $environmentId)
+}
+
+mutation CustomDomainCreate($input: CustomDomainCreateInput!) {
+	customDomainCreate(input: $input) {
+		id
+		domain
+		createdAt
+		updatedAt
+		serviceId
+		environmentId
+		status {
+			dnsRecords {
+				hostlabel
+				fqdn
+				recordType
+				requiredValue
+				currentValue
+				status
+				zone
+				purpose
+			}
+			cdnProvider
+			certificates {
+				issuedAt
+				expiresAt
+				domainNames
+				fingerprintSha256
+				keyType
+			}
+			certificateStatus
+		}
+	}
+}
+
+mutation VariableCollectionUpsert($input: VariableCollectionUpsertInput!) {
+	variableCollectionUpsert(input: $input)
+}
+
+mutation ServiceInstanceUpdate($serviceId: String!, $environmentId: String, $input: ServiceInstanceUpdateInput!) {
+	serviceInstanceUpdate(serviceId: $serviceId, environmentId: $environmentId, input: $input)
+}
+
+mutation ServiceConnect($id: String!, $input: ServiceConnectInput!) {
+	serviceConnect(id: $id, input: $input) {
+		id
+		name
+		icon
+		createdAt
+		projectId
+	}
+}

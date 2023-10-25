@@ -1,0 +1,1 @@
+ALTER TABLE community_roles ADD COLUMN color VARCHAR(20) DEFAULT '' NOT NULL;

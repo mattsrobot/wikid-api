@@ -1,0 +1,1 @@
+ALTER TABLE files ADD COLUMN cf_images_id VARCHAR(255);
